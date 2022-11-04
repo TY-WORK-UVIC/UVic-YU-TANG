@@ -1,0 +1,39 @@
+kosmos-mcv.c:
+
+kosmos-mcv.c can be compiled using the gcc command in the makefile: PASS
+
+./kosmos-mcv.c 60 60 is executed:
+
+Program runs without crashing: PASS
+Program creates at least one valid radical: PASS
+Program creates several valid radicals: PASS
+Program creates all or nearly all valid radicals: FAIL
+
+Code is well written and commented: FAIL
+Code uses mutexes and condition variables properly: FAIL
+
+This program is well commented, but has many unusual problems with its organization
+and operation.  No condition variables are used, and much of its regular logic is
+hidden by an #IFDEF flag.  It uses random number generation extensively to imitate
+proper concurrency usage, and has incorrect output (several carbons appear in multiple
+radicals, and many radicals are themselves misnumbered.)
+
+Grade for kosmos-mcv.c: C
+
+kosmos-sem.c can be compiled using the gcc command in the makefile: PASS
+
+./kosmos-sem.c 60 60 is executed:
+
+Program runs without crashing: PASS
+Program creates at least one valid radical: PASS
+Program creates several valid radicals: PASS
+Program creates all or nearly all valid radicals: PASS
+
+Code is well written and commented: PASS
+Code uses semaphores properly: PASS
+
+This program is much better, but still has the #IFDEF guard problem.
+
+Grade for kosmos-sem.c: A
+
+Combined grade: B
