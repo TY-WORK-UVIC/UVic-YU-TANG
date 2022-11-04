@@ -1,0 +1,6 @@
+GET /notfound HTTP/1.0
+Connection:close
+
+GET /hello.html HTTP/1.0
+Connection:keep-alive
+
