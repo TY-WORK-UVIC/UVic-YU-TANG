@@ -1,0 +1,22 @@
+Assignment 3 feedback for yutang
+
+Test 1: actual output matches expected output: PASS
+Test 2: actual output matches expected output: PASS
+Test 3: actual output matches expected output: FAIL - SEGFAULT
+Test 4: actual output matches expected output: PASS
+Test 5: actual output matches expected output: PASS
+Test 6: actual output matches expected output: FAIL - SEGFAULT
+Test 7: actual output matches expected output: FAIL - SEGFAULT
+Test 8: actual output matches expected output: FAIL - SEGFAULT
+
+In your tests directory you will find the input files we used, the expected output for each test,
+and your output for each test.  Use diff -y to examine the expected and actual output side-by-side.
+For example, if you lost marks for test3, `diff -y test3_expected_output.txt test3_actual_output.txt`
+will show you where your output differs from the expected output.
+
+
+Manual inspection:  Code is well formatted and commented:  PASS
+
+Program segfaults on several inputs.
+
+Grade: C
