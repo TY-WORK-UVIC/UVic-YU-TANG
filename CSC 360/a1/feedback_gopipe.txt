@@ -1,0 +1,61 @@
+gopipe.c can be compiled with the gcc command given in the assignment writeup: PASS
+
+If Enter is pressed (no commands are entered), the program immediately exits: PASS
+
+One command: if the following command is entered:  
+/usr/bin/gcc --version
+
+The output is:
+gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+FAIL
+
+Two commands: if the following commands are entered:  
+/usr/bin/gcc --version
+/usr/bin/head -1
+
+The output is:
+gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+
+FAIL
+
+Three commands: if the following commands are entered: 
+
+/usr/bin/gcc --version
+/usr/bin/head -1
+/usr/bin/tail -c 6
+
+The output is:
+9.3.0
+
+FAIL
+
+Four commands: if the following commands are entered:
+
+/usr/bin/gcc --version
+/usr/bin/head -1
+/usr/bin/tail -c 6
+/usr/bin/rev
+No fifth command is accepted, and the output is:
+0.3.9
+
+FAIL
+
+Any dynamic memory used is cleaned up properly: PASS
+
+Your code will also be inspected for organization, structure and helpful comments:
+
+Your code does not use any functions from the stdio.h library: PASS
+Your code contains comments explaining its functioning: FAIL
+Your code is organized into short functions, each accomplishing a discrete task: FAIL
+Your code is structured to avoid unnecessary repetition: FAIL
+
+Your program has been written in a way that attempts to circumvent the requirements of 
+the assignment - it simply tries to pass each command to system(), so that the os can
+handle the complexity of working with pipes and forking child processes.  The point of 
+the assignment (and of this course) is to learn to manage this complexity yourself.
+
+Grade for gopipe.c: 10/100
